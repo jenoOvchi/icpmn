@@ -62,7 +62,7 @@ Istio has been normal installed during your IBM Cloud Private installation (para
 Be sure to be at the latest version(this command upgrade ISTIO at the latest version):
 
 ```console
-helm upgrade istio ibm-charts/ibm-istio --namespace istio-system --tls --set prometheus.enabled=true --set grafana.enabled=true
+helm upgrade istio ibm-charts/ibm-istio --namespace istio-system --tls --set prometheus.enabled=true --set grafana.enabled=true --set=grafana.image.tag=1.0.2.1  --set=global.proxy.tag=1.0.2.1 --set=pilot.image.tag=1.0.2.1 --version=1.0.5
 ```
 
 Ensure that the `istio-*` Kubernetes services are deployed before you continue.
